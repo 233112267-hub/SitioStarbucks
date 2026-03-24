@@ -1,0 +1,539 @@
+/*Menu */
+/*Este es el menu de mi proyecto pero falta realizar cambios en el acomodo*/
+.navbar {
+    width: 100%;
+    display: flex;
+    /*justify-content: flex-start; justify-content  y flex uso flexbox*/
+    align-items: center;          /*align-items  uso flexbox*/
+    padding: 10px 30px;
+    background-color: #fff;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/*enlace y text-decoration:none es para que no sea vea la linea*/
+.verde {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+
+    /* NUEVO: necesario para que funcione la animación */
+    position: relative;
+    display: inline-block;
+}
+
+/*enlace con hover cuando cambie el estilo al darle click al boton*/
+.verde:hover {
+    color: rgb(0, 130, 72);
+}
+/* Creamos la línea verde debajo del texto */
+.verde::after {
+    content: '';               /* elemento vacío, solo visual */
+    position: absolute;
+    bottom: -4px;              /* distancia entre texto y línea */
+    left: 0;
+    width: 100%;
+    height: 3px;               /* grosor de la línea */
+    background-color: rgb(0, 130, 72);
+    transform: scaleX(0);      /* empieza invisible (ancho 0) */
+    transform-origin: left;    /* crece desde la izquierda */
+    transition: transform 0.3s ease; /* duración de la animación */
+    top: 50px;
+}
+
+/* Al hacer hover, la línea crece hasta el ancho completo */
+.verde:hover::after {
+    transform: scaleX(1);
+}
+.navbar a{
+    color:black;
+    font-weight:bold;
+    font-size:15px;
+    text-decoration:none;
+}
+/*Aclaracion:Este no es un boton.pbutton es una clase para el  parrafo de menu y reward que esta ubicado en la parte de menu 
+    flex-wrap: nowrap; se acomoda en una linea solamente  en uno*/
+.pbutton{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    font-size: 15px;
+    justify-content: flex-end; /*justify-content  y flex uso flexbox*/
+    flex-wrap: nowrap;        /*  flex-nowrap:wrap Todos los elementos se colocan en una sola línea uso flexbox.*/
+}
+.pbutton2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    font-size: 15px;
+    justify-content: flex-end; /*justify-content  y flex uso flexbox*/
+    flex-wrap: nowrap;        /*  flex-nowrap:wrap Todos los elementos se colocan en una sola línea uso flexbox.*/
+}
+/*Logo de Starbucks*/
+.logo{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 40% 60%;/* 40% es el ancho y 60% es el largo de la seccion*/
+    height: calc(100vh - 101px); /* altura del navbar aprox */
+    overflow: hidden;
+
+}
+body{
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+}
+/*Lado derecho donde esta el contenido*/
+#derecha {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:  100%;
+    
+}
+
+/*Seccion verde de inicio de seccion de starbucks
+background: linear-gradient(to bottom,rgb(25, 102, 70) , rgb(16, 64, 44));
+el elemento linear gradient es para degradar uno o mas colores puede ser horizontal, vertical o diagonal el que use es de tipo lineal */
+#principio{
+    background-position: center;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*justify-content  y flex uso flexbox*/
+    align-items: center;     /*align-items  uso flexbox*/  
+    background: linear-gradient(to bottom,rgb(13, 96, 70) , rgb(27, 64, 54));
+    text-align: center;     /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+    position: sticky;
+    top:0;
+    padding: 40px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/*Mis estilos  son los parrafos de texto que se encuentra en la parte verde*/
+.estilo1{
+    color: white;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.estilo2{
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: -40px;
+}
+.estilo3{
+    color: white;
+    font-size: 30px;
+}
+/*Mis estilos   son en la parte final donde el nombre de Starbucks*/
+.estilo4{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 6px;
+    color:#1e3932;
+    text-transform: uppercase;
+}
+.estilo5{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 8px;
+    color:#1e3932;
+    text-transform: uppercase;
+}
+/*Estilos de bottones en la seccion verde */
+.button1{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 2px solid rgb(251, 251, 251);
+    background-color:rgb(22, 76, 60);
+}
+.button2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(1, 74, 44);
+}
+/*linear-gradient(to bottom,rgb(13, 96, 70) , rgb(27, 64, 54))*/
+.button1:hover{
+    color:  rgb(0, 112, 74);
+    border: 2px solid rgb(0, 112, 74);
+    background-color:rgb(22, 76, 60);
+}
+/*Boton con hover en la parte de menu*/
+.button4{
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color:rgb(252, 252, 252);
+}
+.button4:hover{
+    color:  rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    background-color:rgb(223, 224, 224);
+}
+.button7{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color:rgb(0, 0, 0);
+}
+.button7:hover{
+    color:  rgb(249, 249, 249);
+    border: 1px solid rgb(0, 0, 0);
+    background-color:rgb(80, 79, 79);
+}
+/*Orden para la seccion de los dos botones en la seccion verde*/
+#orden{
+    display: flex;
+    align-items: center;     /*align-items  uso flexbox*/  
+    display:flex;
+    gap: 45px;
+}
+/*Orden para la seccion del boton ubicado en la seccion verde*/
+#orden2{
+    display: flex;
+    align-items: center;             /*align-items  uso flexbox*/  
+    margin-left: auto;
+    margin-right: 50px;
+    gap: 20px;
+    }
+/*Acomodo de beneficio*/
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /*align-items  uso flexbox*/  
+    text-align: center;   /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+    gap: 10px;
+    flex: 1 1 180px; /*Recomendacion Universidad : flex lo puedo utilizar para que las imagenes tengan el mismo ancho y 
+    distribuir mi elemento de una sola division*/
+    }
+/*Estilo de la imagenes*/
+.imagenes{
+    width: 100px;
+    height:100px;
+    justify-content: center; /*justify-content  y flex uso flexbox*/
+    align-items: center;     /*align-items  uso flexbox*/  
+    text-align: center;      /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+
+}
+.imagen2{
+display: flex;
+margin-left: 80%;
+width: 100px;
+
+}
+/* Acomodo de esta la seeccion de la imagenes*/
+.container{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around; /*justify-content  y flex uso flexbox*/
+    color: rgb(45, 161, 16);
+    display: flex;
+    align-items: flex-start;       /*align-items  uso flexbox*/  
+    gap:20px;
+    flex-wrap: wrap;            /*  flex-nowrap:wrap Todos los elementos se colocan en una sola línea uso flexbox.*/
+    width: 100%;
+    box-sizing:border-box;
+
+}
+/*
+.ventana {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: 480px;
+    
+    }
+*/
+section{
+    justify-content: center;  /*justify-content  y flex uso flexbox*/
+    flex-wrap: wrap;          /*  flex-wrap:wrap Se envuelven en una nueva línea cuando el espacio no es suficiente uso flexbox.*/
+    width: 100%;
+    box-sizing: border-box;
+}
+/* .container section p  es desendiente */
+.container section p {
+  font-size: 14px;          
+  color: #000;              
+  text-align: center;         /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */    
+  margin-top: 10px;        
+  font-weight: 400;        
+  line-height: 1.3;         
+}
+#caja { 
+    padding: 40px;
+ }
+ /* Estilos en h1,h2 y h3 dentro de la caja */
+#caja h1 { 
+    font-size: 24px;
+    margin-bottom: 24px; 
+    color: #000000;
+    font-family: normal ; 
+    text-align: center;  /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+    display: flex;
+    flex-direction: column;
+
+
+}
+#caja h2 { 
+    font-size: 20px;
+    font-weight: bold;
+    margin: 32px 0 12px;
+    color: #1e3932; }
+#caja h3 { 
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 8px; 
+    color: #1e3932; }
+/* secciones de color amarillo claro con estilo */
+.estrellas {
+    background-color: #f2f0eb;
+    padding: 40px;
+    text-align: center;    /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+    }
+.estrellas2 {
+    background-color: #f2f0eb;
+    padding: 40px;
+}
+.estrellas2 h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Fila completa: estrella + 2 opciones */
+.fila-pago {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr; /* estrella | opcion1 | opcion2 */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Columna de la estrella y texto */
+.fila-pago .etiqueta {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Cada opcion individual imagen+texto */
+.opcion-pago {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.opcion-pago img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.opcion-pago p {
+    font-size: 13px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Estilos de subtitulos */
+h2 {
+     font-size: 25px;
+      margin-bottom: 24px;
+      text-align: center;     /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+     }
+
+h3{
+
+      margin-bottom: 24px;
+      text-align: center;  /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+h4{
+
+      margin-bottom: 20px;
+      text-align: center;  /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+.debajo{
+    font-size: 15px;
+    font-weight: normal;
+    font-weight: bold; 
+    align-items: center;      /*align-items  uso flexbox*/  
+    justify-content: center; /*justify-content  y flex uso flexbox*/
+    text-align: center;     /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+.separadoimagendelado {
+    display: flex;
+    align-items: center;     /*align-items  uso flexbox*/  
+    gap: 20px;            
+    margin-bottom: 20px;     
+    justify-content: flex-start; /*justify-content  y flex uso flexbox*/
+    max-width: 800px;      
+    margin-right: auto;
+    padding:20px;        
+}
+/* Estilo del parrafo*/
+.texto5{
+    max-width:500px;
+    margin:auto;
+    text-align:left;      /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+.ordencolumna{
+display: flex;
+gap: 40px;
+flex-wrap: wrap;        /*  flex-wrap:wrap Se envuelven en una nueva línea cuando el espacio no es suficiente uso flexbox.*/
+text-align: center;     /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+.centrado{
+    padding: 40px;
+    text-align: center;     /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+}
+/* Estilo enlace final para saber mas */
+#final a { 
+    color: rgb(1, 74, 44);
+    font-size: 15px;
+    text-decoration: underline;
+
+
+}
+.chico{
+    height: 2em;
+    width: 2em;
+    position:relative;
+    top: 30px; /* el top sirve para bajar 30px*/
+
+}
+.textoprincipio{
+    font-size: 1.8rem;
+    align-items: center;
+    text-align: center;
+}
+.acomododemitexto{
+    display:flex; 
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px 40px;
+    gap: 30px;
+}
+.acomodoimg{
+    width: 200px; 
+    height: auto; 
+    flex-shrink: 0;
+}
+.img5{
+    width:150px;
+     height:150px;
+}
+.texto6{
+    max-width: 400px; 
+    margin:  auto;
+    text-align:center; 
+    line-height:1.6;
+}
+.saber{ 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    gap:40px; 
+    padding: 20px;
+}
+.info{
+    text-align:left;
+}
+.info h3{
+    margin:0 0 10px 0
+}
+
+.footer {
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footera {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-columna h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-columna a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-columna a:hover {
+    text-decoration: underline;
+}
+
+.footer-linea {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+/* seccion de redes*/
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+/* imagenes donde aparecen las redes*/
+.footer-redes img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+}
+/* Links legales */
+.footer-legal {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.footer-legal a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+/* Reservados todos los derechos*/
+.footer-copy {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+

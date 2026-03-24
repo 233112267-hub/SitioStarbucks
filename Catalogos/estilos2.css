@@ -1,0 +1,310 @@
+/*Menu */
+/*Este es el menu de mi proyecto pero falta realizar cambios en el acomodo*/
+.navbar {
+    width: 100%;
+    display: flex;
+    /*justify-content: flex-start; justify-content  y flex uso flexbox*/
+    align-items: center;          /*align-items  uso flexbox*/
+    padding: 10px 30px;
+    background-color: #fff;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/*enlace y text-decoration:none es para que no sea vea la linea*/
+.verde {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+
+    /* NUEVO: necesario para que funcione la animación */
+    position: relative;
+    display: inline-block;
+}
+
+/*enlace con hover cuando cambie el estilo al darle click al boton*/
+.verde:hover {
+    color: rgb(0, 130, 72);
+}
+/* Creamos la línea verde debajo del texto */
+.verde::after {
+    content: '';               /* elemento vacío, solo visual */
+    position: absolute;
+    bottom: -4px;              /* distancia entre texto y línea */
+    left: 0;
+    width: 100%;
+    height: 3px;               /* grosor de la línea */
+    background-color: rgb(0, 130, 72);
+    transform: scaleX(0);      /* empieza invisible (ancho 0) */
+    transform-origin: left;    /* crece desde la izquierda */
+    transition: transform 0.3s ease; /* duración de la animación */
+    top: 50px;
+}
+
+/* Al hacer hover, la línea crece hasta el ancho completo */
+.verde:hover::after {
+    transform: scaleX(1);
+}
+.navbar a{
+    color:black;
+    font-weight:bold;
+    font-size:15px;
+    text-decoration:none;
+}
+.linea{
+    color:rgb(253, 253, 253);
+    font-weight:bold;
+    font-size:15px;
+    text-decoration:none;
+}
+/*Aclaracion:Este no es un boton. pbutton es una clase para el parrafo de menu y reward
+  que esta ubicado en la parte de menu
+  flex-wrap: nowrap; se acomoda en una linea solamente en uno*/
+.pbutton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 15px;
+    justify-content: flex-end; /*justify-content  y flex uso flexbox*/
+    flex-wrap: nowrap;         /*flex-nowrap:wrap Todos los elementos se colocan en una sola línea uso flexbox.*/
+}
+
+.pbutton2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 15px;
+    justify-content: flex-end; /*justify-content  y flex uso flexbox*/
+    flex-wrap: nowrap;         /*flex-nowrap:wrap Todos los elementos se colocan en una sola línea uso flexbox.*/
+}
+
+/*Logo de Starbucks*/
+.logo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Boton con hover en la parte de menu*/
+.button4 {
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(252, 252, 252);
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.button4:hover {
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(223, 224, 224);
+}
+
+.button7 {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 60px;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    padding: 6px 16px;
+    cursor: pointer;
+}
+
+.button7:hover {
+    color: rgb(249, 249, 249);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(80, 79, 79);
+}
+
+/*Orden para la seccion del boton ubicado en la seccion verde*/
+#orden2 {
+    display: flex;
+    margin-left: auto;
+    margin-right: 50px;
+    gap: 20px;
+    align-items: center;
+}
+
+/* ── contenedor ── */
+/* Acomodo de la seccion de las imagenes
+   flex-direction: column apila los elementos verticalmente */
+.container {
+    max-width: 1000px;
+    width: 90%;
+    padding: 20px 40px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#caja {
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Seccion para los titulos */
+.seccion-linea {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.seccion-titulo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+h1{
+   margin-left: 0; 
+   margin-bottom: 10px; 
+   text-align: left;
+} 
+h4 {
+    margin-left: 40px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+/*Acomodado entre las imagenes
+  Se cambio de flex a grid para forzar exactamente 3 columnas por fila*/
+.bebidas-card {
+    display: grid;
+    grid-template-columns: repeat(3, 160px); /*repeat(3) = siempre 3 columnas fijas*/
+    justify-content: center;                 /*justify-content  y flex uso flexbox*/
+    gap: 30px;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.bebidas {
+    display: flex;
+    flex-direction: column;   /*column apila imagen y texto verticalmente*/
+    align-items: center;      /*align-items  uso flexbox*/
+    text-align: center;       /* div.d { text-align: justify;} alinear texto izquierdo, derecho, en el centro */
+    gap: 10px;
+}
+
+.bebidas img {
+    background-color: rgb(30, 57, 50);
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 0.5em solid transparent; 
+    box-sizing: border-box;
+    object-fit: contain;      /*contain evita que la imagen se distorsione*/
+}
+.bebidas img:hover {
+    border: 0.5em solid rgb(212,233,226);
+}
+.drink-name {
+    font-size: 13px;
+    color: #000;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.3;
+}
+/* ── FOOTER ── */
+.footer {
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.footera {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-columna h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.footer-columna a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer-columna a:hover {
+    text-decoration: underline;
+}
+
+.footer-linea {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* seccion de redes*/
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* imagenes donde aparecen las redes*/
+.footer-redes img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Links legales */
+.footer-legal {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.footer-legal a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+/* Reservados todos los derechos*/
+.footer-copy {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+/*@media se activa cuando la pantalla es menor a 600px
+   Cambia de 3 columnas a 2 columnas automaticamente */
+@media (max-width: 600px) {
+    .bebidas-card {
+        grid-template-columns: repeat(2, 160px); /*en celular: 2 columnas*/
+    }
+
+    #caja {
+        padding: 10px;
+    }
+}
