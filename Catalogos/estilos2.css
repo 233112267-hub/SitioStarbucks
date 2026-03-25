@@ -299,8 +299,9 @@ h4 {
 }
 /*@media se activa cuando la pantalla es menor a 600px
    Cambia de 3 columnas a 2 columnas automaticamente */
+   /*Ayuda a que sea reponsivo */
 @media (max-width: 600px) {
-    .bebidas-card {
+    .bebidas-card{
         grid-template-columns: repeat(2, 160px); /*en celular: 2 columnas*/
     }
 
